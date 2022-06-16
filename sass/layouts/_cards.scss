@@ -1,0 +1,49 @@
+.card-tuto {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-background-first;
+    width: 80%;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    & i {
+        position: relative;
+    }
+}
+
+.card-menu {
+    @include flex-menu;
+    padding-top: 20px;
+    &__title {
+        text-transform: uppercase;
+        font-size: 1.1em;
+        font-weight: 400;
+        &::after {
+            content: "";
+            display: block;
+            width: 46px;
+            padding-top: 6px;
+            border-bottom: 3px solid $color-tertiary;
+        }
+    }
+    &__dish {
+        @include flex-menu;
+        box-shadow: $box-shadow-first;
+        width: 100%;
+        border-radius: 20px;
+        background-color: white;
+        padding: 14px;
+        & h3 {
+            margin: 0
+        }
+    }
+    &__price {
+        @include flex-menu;
+        flex-direction: row;
+        justify-content: space-between;
+        & p {
+            margin: 0;
+        }
+    }
+}

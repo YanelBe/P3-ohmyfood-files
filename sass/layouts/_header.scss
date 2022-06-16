@@ -1,0 +1,24 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &__logo {
+        display: flex;
+        justify-content: center;
+        height: 60px;
+        width: 100%;
+        padding: $padding-slot-first;
+    }
+    & span {
+        display: flex;
+        justify-content: center;
+        padding: $padding-slot-first;
+        width: 100%;
+        background-color: $color-background-second;
+    }
+    & i {
+        position: relative;
+        right: 20px;
+    }
+}

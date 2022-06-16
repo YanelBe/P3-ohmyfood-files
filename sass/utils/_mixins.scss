@@ -8,6 +8,12 @@
     padding: 16px;
 }
 
+@mixin top-img-container {
+    height: 255px;
+    width: 100%;
+    overflow: hidden;
+}
+
 @mixin img-container {
     overflow: hidden;
     height: 100%;
@@ -28,6 +34,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@mixin flex-menu {
+    display: flex;
+    flex-direction: column;
 }
 
 

@@ -1,0 +1,15 @@
+@import "./utils/variables";
+@import "./utils/mixins.scss";
+
+@import "./base/base.scss";
+@import "./base/typography.scss";
+
+@import "./components/buttons.scss";
+
+@import "./layouts/cards.scss";
+@import "./layouts/container.scss";
+@import "./layouts/header.scss";
+@import "./layouts/footer.scss";
+
+@import "./pages/work.scss";
+
