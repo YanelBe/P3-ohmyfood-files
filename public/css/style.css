@@ -29,10 +29,11 @@ body {
   justify-content: center;
   cursor: pointer;
   border-radius: 30px;
-  font-weight: 500;
+  font-weight: 400;
   border: 0;
   color: white;
-  width: 180px;
+  font-size: 14px;
+  width: 200px;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   padding: 16px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
@@ -82,7 +83,6 @@ body {
   width: 100%;
   z-index: 9999;
   opacity: 1;
-  transform: opacity 1s linear;
   animation: fadeout 0.3s linear;
   animation-delay: 1.5s;
   animation-fill-mode: both;
@@ -101,7 +101,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-color: #f6f6f6;
+  background: #f6f6f6;
   width: 90%;
   padding: 20px;
   margin: 10px;
@@ -129,6 +129,9 @@ body {
 }
 .how-to__card p {
   font-weight: 500;
+}
+.how-to__card:hover {
+  background: #f2eafb;
 }
 
 .card-menu {
@@ -311,11 +314,16 @@ footer i {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 10%;
+  padding: 8%;
   background-color: #f6f6f6;
 }
 .explore a {
   text-decoration: none;
+}
+.explore h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 60px;
 }
 
 .how-to {

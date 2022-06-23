@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color: $color-background-first;
+    background: $color-background-first;
     width: 90%;
     padding: 20px;
     margin: 10px;
@@ -19,7 +19,6 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-            
         position: relative;
         right: 30px;
     }
@@ -30,6 +29,9 @@
     }
     & p {
         font-weight: 500;
+    }
+    &:hover {
+        background: lighten($color-primary, 35);
     }
 }
 

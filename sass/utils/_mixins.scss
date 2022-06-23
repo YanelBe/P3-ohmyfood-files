@@ -3,10 +3,11 @@
     justify-content: center;
     cursor: pointer;
     border-radius: 30px;        
-    font-weight: 500;
+    font-weight: 400;
     border: 0;
     color: white;
-    width: 180px;
+    font-size: 14px;
+    width: 200px;
     background: linear-gradient(170deg, $color-secondary, $color-primary);
     padding: 16px;
     box-shadow: $box-shadow-second;
