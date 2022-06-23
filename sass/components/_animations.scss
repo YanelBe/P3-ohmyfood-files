@@ -1,0 +1,61 @@
+@keyframes fadein {
+    from {
+		transform: translateX(20px);
+        opacity: 0;
+    }
+    to {
+		transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+    
+@keyframes fadeout {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    background: white;
+    height: 100vh;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    position: fixed;
+    transition: opacity 0.2s linear;
+    width: 100%;
+    z-index: 9999;
+    opacity: 1;
+    transform: opacity 1s linear;
+    animation: fadeout 0.3s linear;
+    animation-delay: 1.5s;
+    animation-fill-mode: both;
+    
+    &__inside {
+        border: 10px solid $color-background-first;
+        border-radius: 50%;
+        border-top: 10px solid $color-tertiary;
+        width: 120px;
+        height: 120px;
+        animation: rotate 1s linear infinite;
+        position: absolute;
+    }
+}
+

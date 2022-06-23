@@ -1,8 +1,12 @@
+
 .explore {
     @include flex-column;
     text-align: center;
     padding: 10%;
     background-color: $color-background-first;
+    & a {
+      text-decoration: none;
+    }
 }
 
 .how-to {
@@ -60,9 +64,9 @@
 .fa-heart {
     text-shadow: 0px 0px 3px black;
     color: white;
-    &--hover {
-        color: linear-gradient($color-secondary, $color-primary);
+    &:hover {
+        text-shadow: none;
+        color: $color-secondary;
     }
   
 }
-

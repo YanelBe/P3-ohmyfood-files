@@ -1,11 +1,19 @@
 @mixin btn {
     display: flex;
+    justify-content: center;
+    cursor: pointer;
     border-radius: 30px;        
     font-weight: 500;
     border: 0;
     color: white;
-    background: linear-gradient($color-secondary, $color-primary);
+    width: 180px;
+    background: linear-gradient(170deg, $color-secondary, $color-primary);
     padding: 16px;
+    box-shadow: $box-shadow-second;
+    &:hover {
+        background: linear-gradient(170deg, lighten($color-secondary, 10), lighten($color-primary, 10));
+        box-shadow: $box-shadow-third;
+    }
 }
 
 @mixin top-img-container {

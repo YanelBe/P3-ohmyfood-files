@@ -21,4 +21,18 @@
         position: relative;
         right: 20px;
     }
+    &__back {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        & a {
+            font-size: 1.5rem;
+            color: black;
+            position: absolute;
+            align-self: center;
+            left: 40px;
+            
+        }
+    }
 }
