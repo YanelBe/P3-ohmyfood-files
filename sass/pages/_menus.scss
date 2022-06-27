@@ -1,45 +1,37 @@
-.how-to__card {    
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.menu-container {
     background: $color-background-first;
-    width: 90%;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 20px;
-    box-shadow: $box-shadow-second;
+    padding: $container-padding;
+    border-radius: 30px 30px 0 0;
     position: relative;
-    & .number {
-        color: white;
-        border: 3px solid $color-primary;
-        background-color: $color-primary;
-        border-radius: 50%;
-        height: 30px;
-        width: 30px;
-        display: inline-flex;
-        justify-content: center;
+    bottom: 26px;
+    margin-bottom: -26px;
+    &__type {
+        @media screen and (min-width: $bp-medium) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+    }
+    &__title {
+        display: flex;
+        flex-direction: row;
         align-items: center;
-        position: relative;
-        right: 30px;
-    }
-    & i {
-        padding: 0 30px 0 0;
-        color: grey;
-        font-size: large;
-    }
-    & p {
-        font-weight: 500;
-    }
-    &:hover {
-        background: lighten($color-primary, 35);
+        justify-content: space-between;
+        & i {
+            font-size: 1.5em;
+            position: relative;
+            right: 30px;
+        }
     }
 }
-
-
 
 .card-menu {
     @include flex-menu;
     padding-top: 20px;
+    @media screen and (min-width: $bp-medium) {
+        width: 30%;
+    }
     &__type {
         text-transform: uppercase;
         font-size: 1.1em;
@@ -65,12 +57,12 @@
         animation: fadein 1s;
         animation-fill-mode: backwards;
 
-        &:nth-child(1) {animation-delay: 0ms; }
-        &:nth-child(2) {animation-delay: 100ms; }
-        &:nth-child(3) {animation-delay: 200ms; }
-        &:nth-child(4) {animation-delay: 300ms; }
-        &:nth-child(5) {animation-delay: 400ms; }
-        
+        @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+                animation-delay: $i * 150ms;
+            }
+        }
+
 
         &__name {
             flex: 1;

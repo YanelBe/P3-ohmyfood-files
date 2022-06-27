@@ -12,6 +12,12 @@ footer {
     & i {
         font-size: 1em;
         padding-right: 4px;
-        
+    }
+    & a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }

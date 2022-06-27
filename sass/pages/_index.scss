@@ -1,0 +1,164 @@
+.explore {
+    @include flex-column;
+    text-align: center;
+    padding: 8%;
+    background-color: $color-background-first;
+    @media screen and (min-width: $bp-medium) {
+        padding: 5%;
+    }
+    & a {
+      text-decoration: none;
+    }
+    & h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-bottom: 60px;
+    }
+}
+
+.how-to {
+    @include flex-column;
+    padding: $container-padding;
+    &__container {
+        width: 100%;
+        @include flex-column;
+        @media screen and (min-width: $bp-medium) {
+            flex-direction: row;
+            justify-content: space-around;
+            width: 80%;
+        }
+    }
+    &__card {    
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background: $color-background-first;
+        width: 90%;
+        padding: 20px;
+        margin: 10px;
+        border-radius: 20px;
+        box-shadow: $box-shadow-second;
+        position: relative;
+        @media screen and (min-width: $bp-medium) {
+            width: 80%;
+            margin: 20px;
+        }
+        & .number {
+            color: white;
+            border: 3px solid $color-primary;
+            background-color: $color-primary;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            right: 30px;
+        }
+        & i {
+            padding: 0 30px 0 0;
+            color: grey;
+            font-size: large;
+        }
+        & p {
+            font-weight: 500;
+        }
+        &:hover {
+            background: lighten($color-primary, 35);
+        }
+    }
+    
+}
+
+.restaurant {
+    background-color: $color-background-first;
+    width: 100%;
+    padding: $container-padding;
+    &__list {
+        @include flex-column;
+        @media screen and (min-width: $bp-medium) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+    &__card {
+        display: block;
+        align-items: center;
+        width: 100%;
+        background: white;
+        border-radius: 20px;
+        margin: 14px 0;
+        height: 250px;
+        box-shadow: $box-shadow-first;
+        transition: 0.3s;
+        opacity: 1;
+        transform: scale(1);
+        @media screen and (min-width: $bp-medium) {
+            width: 40%;
+            margin: 40px;
+        }
+        &:hover {
+            cursor: pointer;
+            transition: 0.3s;
+            opacity: 0.8;
+            transform: scale(1.02);
+
+        }
+    }
+    &__new {
+        background: $color-tertiary;
+        border-radius: 5px;
+        color: darken($color-tertiary, 40);
+        position: absolute;
+        padding: 0.5rem;
+        right: 1rem;
+        top: 1rem;
+    }
+    &__img {
+        @include img-container;
+        & img {
+        @include img-ratio;
+        }
+    }
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 75px;
+        padding: 0 16px 0 16px;
+        overflow: hidden;
+        &-2 h3, p {
+            margin: 0;
+        }
+    }
+    & a {
+        @include text-links;
+    }
+
+}
+
+.top-img {
+    @include top-img-container;
+    & img {
+        @include img-ratio;
+    }
+}
+
+.fa-heart {
+    cursor: pointer;
+    color: white;
+    transition: 300ms;
+    text-shadow: 0 0 3px #000;
+    font-size: 1.2rem;
+    &:hover {
+        background: linear-gradient($color-primary, $color-secondary);
+        text-shadow: none;
+        font-weight: 600;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        transition: 300ms;
+    }
+  
+}

@@ -11,9 +11,11 @@
     background: linear-gradient(170deg, $color-secondary, $color-primary);
     padding: 16px;
     box-shadow: $box-shadow-second;
+    transition: 0.3s;
     &:hover {
         background: linear-gradient(170deg, lighten($color-secondary, 10), lighten($color-primary, 10));
         box-shadow: $box-shadow-third;
+        transition: 0.3s;
     }
 }
 
@@ -55,4 +57,3 @@
     text-decoration: none;
     color: black;
 }
-
