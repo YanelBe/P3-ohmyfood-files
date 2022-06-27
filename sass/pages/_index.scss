@@ -75,12 +75,19 @@
     background-color: $color-background-first;
     width: 100%;
     padding: $container-padding;
+    & h2 {
+        @media screen and (min-width: $bp-medium) {
+            text-align: center;
+        }
+    }
+    
     &__list {
         @include flex-column;
         @media screen and (min-width: $bp-medium) {
             flex-direction: row;
             flex-wrap: wrap;
         }
+
     }
     &__card {
         display: block;

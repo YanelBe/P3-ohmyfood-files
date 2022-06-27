@@ -262,6 +262,11 @@ footer a:hover {
   width: 100%;
   padding: 34px 20px;
 }
+@media screen and (min-width: 992px) {
+  .restaurant h2 {
+    text-align: center;
+  }
+}
 .restaurant__list {
   display: flex;
   flex-direction: column;
