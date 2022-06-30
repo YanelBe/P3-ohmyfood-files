@@ -196,9 +196,16 @@ footer a:hover {
 .how-to {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
   padding: 34px 20px;
+}
+@media screen and (min-width: 768px) {
+  .how-to {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .how-to__container {
   width: 100%;
@@ -211,7 +218,7 @@ footer a:hover {
   .how-to__container {
     flex-direction: row;
     justify-content: space-around;
-    width: 80%;
+    width: 90%;
   }
 }
 .how-to__card {
@@ -262,7 +269,7 @@ footer a:hover {
   width: 100%;
   padding: 34px 20px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .restaurant h2 {
     text-align: center;
   }
@@ -356,14 +363,11 @@ footer a:hover {
 
 .fa-heart {
   cursor: pointer;
-  color: white;
-  transition: 300ms;
-  text-shadow: 0 0 3px #000;
-  font-size: 1.2rem;
+  transition: 600ms ease-in;
+  font-size: 1.4rem;
 }
 .fa-heart:hover {
   background: linear-gradient(#9356DC, #FF79DA);
-  text-shadow: none;
   font-weight: 600;
   color: transparent;
   -webkit-background-clip: text;

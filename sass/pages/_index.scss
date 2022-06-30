@@ -17,15 +17,20 @@
 }
 
 .how-to {
-    @include flex-column;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     padding: $container-padding;
+    @media screen and (min-width: $bp-small) {
+        @include flex-column;     
+    }
     &__container {
         width: 100%;
         @include flex-column;
         @media screen and (min-width: $bp-medium) {
             flex-direction: row;
             justify-content: space-around;
-            width: 80%;
+            width: 90%;
         }
     }
     &__card {    
@@ -76,7 +81,7 @@
     width: 100%;
     padding: $container-padding;
     & h2 {
-        @media screen and (min-width: $bp-medium) {
+        @media screen and (min-width: $bp-small) {
             text-align: center;
         }
     }
@@ -154,13 +159,10 @@
 
 .fa-heart {
     cursor: pointer;
-    color: white;
-    transition: 300ms;
-    text-shadow: 0 0 3px #000;
-    font-size: 1.2rem;
+    transition: 600ms ease-in;
+    font-size: 1.4rem;
     &:hover {
         background: linear-gradient($color-primary, $color-secondary);
-        text-shadow: none;
         font-weight: 600;
         color: transparent;
         -webkit-background-clip: text;
